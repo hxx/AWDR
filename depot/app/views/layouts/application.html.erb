@@ -14,13 +14,9 @@
   <div id="columns">
     <div id ="side">
       <%= Time.now.to_formatted_s(:db) %>
-      <div id="cart"
-          <% if @cart.line_items.empty? %>
-            style="display: none"
-          <% end %>
-        >
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
         <%= render @cart %>
-      </div>
+      <% end %>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#/faq">Questions</a></li>
