@@ -14,7 +14,11 @@
   <div id="columns">
     <div id ="side">
       <%= Time.now.to_formatted_s(:db) %>
-      <div id="cart">
+      <div id="cart"
+          <% if @cart.line_items.empty? %>
+            style="display: none"
+          <% end %>
+        >
         <%= render @cart %>
       </div>
       <ul>
