@@ -18,6 +18,10 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    item = LineItem.new
+    item.build_cart
+    item.product = product(:ruby)
+    item.save!
     get :new
     assert_response :success
   end
