@@ -28,9 +28,9 @@
 
       <% if session[:user_id] %>
         <ul>
-          <li><%= linke_to 'Order',    orders_path   %></li>
-          <li><%= linke_to 'Products', products_path %></li>
-          <li><%= linke_to 'Users',    users_path    %></li>
+          <li><%= link_to 'Order',    orders_path   %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Users',    users_path    %></li>
         </ul>
       <% end %>
     </div>

@@ -61,7 +61,7 @@ class UsersController < ApplicationController
       flash[:notice] = e.message
     end
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url }
       format.json { head :no_content }
     end
   end
