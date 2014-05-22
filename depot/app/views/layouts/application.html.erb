@@ -14,7 +14,7 @@
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>
-    <%= image_tag("logo.png",height: 44 ) %>
+    <%= link_to image_tag("logo.png",height: 42 ), '/' %>
     <%= @page_title || t('.title') %>
   </div>
   <div id="columns">
