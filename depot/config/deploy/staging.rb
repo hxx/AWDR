@@ -1,5 +1,5 @@
-set :app_server, 'play.huangxingxing.info'
-set :app_url, 'http://depot.huangxingxing.info'
+set :app_server, '106.186.121.41'
+set :app_url, 'li672-41.members.linode.com'
 set :application, app_server
 role :web, app_server
 role :app, app_server
