@@ -30,8 +30,8 @@ set :bundle_without, [:darwin, :development, :test]
 # require gem 'capistrano-ext'
 require 'capistrano/ext/multistage'
 set :stages, %w(production staging)
-set :default_stage, "staging" # require config/deploy/staging.rb
-# set :default_stage, "production" # require config/deploy/production.rb
+# set :default_stage, "staging" # require config/deploy/staging.rb
+set :default_stage, "production" # require config/deploy/production.rb
 
 # server details
 default_run_options[:pty] = true # apparently helps with passphrase prompting
