@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pictures
+
   get 'admin' => 'admin#index'  
   controller :sessions do
     get 'login' => :new
@@ -26,6 +28,11 @@ Rails.application.routes.draw do
     resources :carts
     root 'store#index', as: 'store', via: :all
   end
+
+  get 'upload/get' => 'upload#get'
+  get 'upload/picture' => 'upload#picture'
+  get 'upload/show/:id' => 'upload#show'
+  post 'upload/save' => 'upload#save'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
