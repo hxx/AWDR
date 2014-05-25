@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :news
+
   resources :pictures
 
   get 'admin' => 'admin#index'  
