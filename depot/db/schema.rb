@@ -41,10 +41,12 @@ ActiveRecord::Schema.define(version: 20140525023114) do
   end
 
   create_table "pictures", force: true do |t|
-    t.string "comment"
-    t.string "name"
-    t.string "content_type"
-    t.binary "data",         limit: 1048576
+    t.string   "comment"
+    t.string   "name"
+    t.string   "content_type"
+    t.binary   "data",         limit: 1048576
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
