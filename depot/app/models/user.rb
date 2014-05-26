@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+  # validates :name, presence: true, uniqueness: true
   after_destroy :ensure_an_admin_remains
   has_secure_password
 
