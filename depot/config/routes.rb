@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :news
+
   resources :pictures
 
-  get 'admin' => 'admin#index'  
+  get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
     post 'login' => :create

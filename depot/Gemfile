@@ -43,8 +43,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem "pry-rails", "~> 0.3.0"
 gem "pry-debugger", "~> 0.2.2"
 
-# User Capistrano for deployment
+# Use Capistrano for deployment
 gem 'rvm-capistrano', group: :development
+
+# Use devise for authentication
+# source: https://github.com/plataformatec/devise
+gem 'devise', '~> 3.2.4'
 
 group :prodcution do
   gem 'mysql2'
