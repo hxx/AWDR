@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   # GET /news

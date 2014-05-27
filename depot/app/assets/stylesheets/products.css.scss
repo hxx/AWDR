@@ -50,9 +50,15 @@
   }
 }
 
+#user_nav {
+  float: right;
+  margin: 0.25em 2em;
+}
+
+
 #banner {
   background: #9c9;
-  padding: 10px;
+  padding: 0.75em;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
   color: #282;

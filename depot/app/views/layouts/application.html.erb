@@ -17,10 +17,6 @@
       <%= link_to "Login", new_user_session_path %>
     <% end %>
   </div>
-
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, id: "flash_#{name}" %>
-  <% end %>
   <div id="banner">
     <%= form_tag store_path, class: 'locale' do %>
       <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -28,11 +24,11 @@
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>
-    <%= link_to image_tag("logo.png",height: 42 ), '/' %>
+    <%= link_to image_tag("logo.png",height: 45 ), '/' %>
     <%= @page_title || t('.title') %>
   </div>
   <div id="columns">
-    <div id ="side">
+    <div id="side">
       <%= Time.now.to_formatted_s(:db) %>
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -46,7 +42,7 @@
         <li><a href="#/contact"><%= t('.contact') %></a></li>
       </ul>
 
-      <% if session[:user_id] %>
+      <% if user_signed_in? %>
         <ul>
           <li><%= link_to 'Order',    orders_path   %></li>
           <li><%= link_to 'Products', products_path %></li>
