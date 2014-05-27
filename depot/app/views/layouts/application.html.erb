@@ -24,11 +24,11 @@
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>
-    <%= link_to image_tag("logo.png",height: 42 ), '/' %>
+    <%= link_to image_tag("logo.png",height: 45 ), '/' %>
     <%= @page_title || t('.title') %>
   </div>
   <div id="columns">
-    <div id ="side">
+    <div id="side">
       <%= Time.now.to_formatted_s(:db) %>
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
