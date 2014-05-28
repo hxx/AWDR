@@ -50,6 +50,10 @@ gem 'rvm-capistrano', group: :development
 # source: https://github.com/plataformatec/devise
 gem 'devise', '~> 3.2.4'
 
+# Use cancancan for authorization library
+# source: https://github.com/CanCanCommunity/cancancan
+gem 'cancancan', '~> 1.8.1'
+
 group :prodcution do
   gem 'mysql2'
 end
