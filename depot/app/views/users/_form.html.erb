@@ -1,38 +1,12 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= simple_form_for(@user) do |f| %>
   <fieldset>
   <legend>Enter User Details</legend>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, size: 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username, size: 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, size: 40 %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, size: 40 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.input :name, input_html: { maxlength: 40 } %>
+  <%= f.input :username, input_html: { maxlength: 40 }  %>
+  <%= f.input :password, input_html: { maxlength: 40 }  %>
+  <%= f.input :password_confirmation, input_html: { maxlength: 40 }  %>
+  <%= f.button :submit %>
 
   </fieldset>
 
