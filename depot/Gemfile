@@ -57,3 +57,7 @@ gem 'cancancan', '~> 1.8.1'
 group :prodcution do
   gem 'mysql2'
 end
+
+# Use simple_form for Rails form
+# source: https://github.com/plataformatec/simple_form
+gem 'simple_form', '~> 3.0.2'
