@@ -7,7 +7,6 @@
 
 .simple_form div.input {
   margin-bottom: 10px;
-  width: 200px;
 }
 
 .simple_form div.boolean, .simple_form input[type='submit'] {
@@ -39,4 +38,21 @@
   color: #555;
   display: block;
   font-style: italic;
+}
+
+#product_price {
+  width: 900px;
+}
+
+#product_title {
+  width: 900px;
+}
+
+#product_description {
+  width: 900px;
+  height: 100px;
+}
+
+#product_image_url {
+  width: 900px;
 }
